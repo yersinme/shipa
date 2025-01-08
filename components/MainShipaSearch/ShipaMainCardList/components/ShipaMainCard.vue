@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import { defineProps } from "vue";
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
+
+const toShipaPage = (id) => {
+  router.push(`/shipa/${id}`)
+}
 
 const props = defineProps({
   ShipaCardData: {
@@ -10,7 +17,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <NuxtLink to="/s" class="shipa-card_link" v-for="card in ShipaCardData" :key="card.id">
+  <NuxtLink to="/s" class="shipa-card_link" v-for="card in ShipaCardData" :key="card.id" @click="toShipaPage(card.id)">
     <div class="shipa-card">
       <div class="shipa-card_img">
         <img :src="card.defaultImage" alt="Image of {{ card.title }}" />
