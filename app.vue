@@ -10,7 +10,7 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
-  list-style-type: none;
   border: none;
+  color: #fff;
 }
 </style>

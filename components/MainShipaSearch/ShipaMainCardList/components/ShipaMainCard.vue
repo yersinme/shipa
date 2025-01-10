@@ -17,7 +17,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <NuxtLink to="/s" class="shipa-card_link" v-for="card in ShipaCardData" :key="card.id" @click="toShipaPage(card.id)">
+  <NuxtLink class="shipa-card_link" v-for="card in ShipaCardData" :key="card.id" @click="toShipaPage(card.id)">
     <div class="shipa-card">
       <div class="shipa-card_img">
         <img :src="card.defaultImage" alt="Image of {{ card.title }}" />
@@ -25,7 +25,6 @@ const props = defineProps({
       <div class="shipa-card_info">
         <h2 class="shipa-card_title">{{ card.title }}</h2>
         <h3 class="shipa-card_subtitle">{{ card.subtitle }}</h3>
-        <p class="shipa-card_description">{{ card.description }}</p>
         <ul class="shipa-card_treatments">
           <li v-for="treat in card.treatments" :key="treat.id">{{ treat.name }}</li>
         </ul>

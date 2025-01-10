@@ -7,7 +7,7 @@ import { ref, computed, onMounted } from "vue";
 const route = useRoute();
 const products = ref([]);
 const imgData = ref();
-const model = ref()
+const model = ref();
 
 onMounted(async () => {
   try {
@@ -16,7 +16,10 @@ onMounted(async () => {
     );
     products.value = data;
     // Установим изображение по умолчанию как первое в массиве sliderImages
-    if (products.value.length > 0 && products.value[0].sliderImages.length > 0) {
+    if (
+      products.value.length > 0 &&
+      products.value[0].sliderImages.length > 0
+    ) {
       imgData.value = products.value[0].sliderImages[0];
     }
   } catch (err) {
@@ -39,7 +42,7 @@ const sendImgData = (data) => {
       <SlideMainIMG :imgData="imgData" />
     </div>
     <div v-if="product && product.sliderImages" class="slider-container">
-      <v-sheet class="mx-auto" elevation="18" max-width="800">
+      <v-sheet class="mx-auto" elevation="50" max-width="750" width="100%">
         <v-slide-group v-model="model" class="pa-4" center-active show-arrows>
           <v-slide-group-item
             v-for="(img, i) in product.sliderImages"
@@ -49,11 +52,16 @@ const sendImgData = (data) => {
             <v-card
               :color="isSelected ? 'primary' : 'grey-lighten-1'"
               class="ma-4 image-card"
-              height="200"
+              height="150"
               width="130"
               @click="toggle"
             >
-              <img :src="img" alt="Image" class="slider-img" @click="sendImgData(img)" />
+              <img
+                :src="img"
+                alt="Image"
+                class="slider-img"
+                @click="sendImgData(img)"
+              />
             </v-card>
           </v-slide-group-item>
         </v-slide-group>
@@ -65,14 +73,35 @@ const sendImgData = (data) => {
 
 <style scoped lang="scss">
 .product-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    max-width: 800px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 
-.main-image-container {
-    border-radius: 10px;
+
+.slider-container {
+  width: 100%;
 }
- </style>
+
+.slider-img {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mx-auto {
+  background-color: #252836;
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 1024px) {
+
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+
+  }
+
+</style>
