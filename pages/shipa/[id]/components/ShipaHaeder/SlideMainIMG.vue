@@ -17,7 +17,8 @@ const props = defineProps({
 
 <style scoped>
 .image-container {
-  width: 600px; /* Базовый размер для десктопа */
+  width: 100%;
+  max-width: 600px; /* Базовый размер для десктопа */
   height: 500px;
   overflow: hidden;
   display: flex;

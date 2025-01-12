@@ -3,6 +3,7 @@ import axios from "axios";
 import { useRoute } from "vue-router";
 import { ref } from "vue";
 import ShipaProceduresList from './ShipaProceduresList.vue'
+import RoomsShipa from "./RoomsShipa.vue"
 
 const route = useRoute();
 const id = route.params.id;
@@ -30,6 +31,7 @@ onMounted(async () => {
         {{ item.subtitle }}
       </div>
     </div>
+    <RoomsShipa :subtitles="subtitles"/>
     <ShipaProceduresList :subtitles="subtitles"/>
   </div>
 </template>
@@ -43,8 +45,14 @@ onMounted(async () => {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  transition: transform 0.2s;
+  color: #fff;
+  width: 100%;
 }
 
+.under-title:hover {
+  transform: scale(1.02);
+}
 .subtitle_title {
   color: #ddac58;
 }

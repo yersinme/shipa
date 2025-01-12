@@ -11,6 +11,5 @@
   margin: 0;
   text-decoration: none;
   border: none;
-  color: #fff;
 }
 </style>

@@ -16,14 +16,18 @@ import Sidebar from "./ShipaSideBar.vue"
 
 .shipa-data_container {
   display: flex;
-  /* max-width: 1300px;
-  margin: 0 auto; */
+
+  width: 100%;
+  /* flex-wrap: wrap; */
+  /* max-width: 1300px; */
+  /* margin: 0 auto;  */
   /* background-color: red; */
 }
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
   .shipa-data_container {
-    flex-direction: column;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
   }
 }
 </style>

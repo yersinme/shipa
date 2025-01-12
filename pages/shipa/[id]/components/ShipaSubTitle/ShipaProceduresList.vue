@@ -9,8 +9,8 @@ const props = defineProps({
 </script>
 
 <template>
-  <div>
-    <div v-for="subtitle in subtitles" :key="subtitle.id">
+  <div class="procedures">
+    <div v-for="subtitle in subtitles" :key="subtitle.id" class="procedures-container">
       <div v-for="item in subtitle.procedures" :key="item.id" class="procedures_ul">
         <h2 class="procedures_ul_title">{{ item.name }}</h2>
         <ul v-for="descrip in item.description" :key="descrip.id" >
@@ -23,6 +23,10 @@ const props = defineProps({
 </template>
 
 <style scoped lang="scss">
+.procedures {
+  margin: 30px;
+  color: #fff;
+}
 .procedures_ul {
     display: flex;
     flex-wrap: wrap;
@@ -34,5 +38,11 @@ const props = defineProps({
         color: #ddac58;
         margin-bottom: 15px;
     }
+}
+
+@media (max-width: 768px) {
+  .procedures_ul {
+    height: 100%;
+  }
 }
 </style>

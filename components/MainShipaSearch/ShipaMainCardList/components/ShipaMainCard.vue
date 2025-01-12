@@ -41,7 +41,7 @@ $card-bg-color: #fff;
 $card-border-color: #ddd;
 $card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 $card-padding: 20px;
-$title-color: #333;
+$title-color: #000;
 $subtitle-color: #555;
 $description-color: #666;
 $info-font-size: 1rem;
@@ -88,10 +88,12 @@ $link-decoration: none;
     flex-direction: column;
     justify-content: space-between;
 
+
     &_title {
       color: $title-color;
       font-size: 1.5rem;
-      margin-bottom: 10px;
+      margin-bottom: 10px;    
+
     }
 
     &_subtitle {

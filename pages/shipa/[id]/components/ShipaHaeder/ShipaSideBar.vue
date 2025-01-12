@@ -44,6 +44,13 @@ onMounted(async () => {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  color: #fff ;
+  transition: transform 0.2s;
+
+}
+
+.sidebar:hover {
+  transform: scale(1.02);
 }
 
 .sidebar_title {
@@ -52,6 +59,22 @@ onMounted(async () => {
 
 .sidebar_subtitle {
   color: #ddac58;
+}
+
+.subtitle_description {
+  color: #fff;;
+}
+
+@media (max-width: 768px) {
+ .sidebar {
+  width: 100%;
+ }
+ .sidebar_title {
+  font-size: 28px;
+ }
+ .sidebar_subtitle {
+  font-size: 18px;
+ }
 }
 </style>
 
