@@ -51,7 +51,7 @@ onMounted(async () => {
   }
 
   .shipa-card {
-    padding: 10px;
+    // padding: 10px;
     font-size: 0.9rem; /* Уменьшение шрифта для мобильных */
   }
 }
@@ -60,7 +60,7 @@ onMounted(async () => {
 .shipa-card {
   border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 15px;
+  // padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   background-color: #fff;
 }

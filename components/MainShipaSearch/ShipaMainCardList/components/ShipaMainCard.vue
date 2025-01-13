@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { defineProps } from "vue";
-import { useRouter } from 'vue-router';
-
-const router = useRouter()
+import { useRouter } from "vue-router";
+import { styleState } from "../../composables/index";
+const router = useRouter();
 
 const toShipaPage = (id) => {
-  router.push(`/shipa/${id}`)
-}
+  router.push(`/shipa/${id}`);
+};
 
 const props = defineProps({
   ShipaCardData: {
@@ -17,8 +17,13 @@ const props = defineProps({
 </script>
 
 <template>
-  <NuxtLink class="shipa-card_link" v-for="card in ShipaCardData" :key="card.id" @click="toShipaPage(card.id)">
-    <div class="shipa-card">
+  <NuxtLink
+    class="shipa-card_link"
+    v-for="card in ShipaCardData"
+    :key="card.id"
+    @click="toShipaPage(card.id)"
+  >
+    <div class="shipa-card"  :class="styleState ? 'list-view-flex' : 'grid-view-none'">
       <div class="shipa-card_img">
         <img :src="card.defaultImage" alt="Image of {{ card.title }}" />
       </div>
@@ -26,10 +31,12 @@ const props = defineProps({
         <h2 class="shipa-card_title">{{ card.title }}</h2>
         <h3 class="shipa-card_subtitle">{{ card.subtitle }}</h3>
         <ul class="shipa-card_treatments">
-          <li v-for="treat in card.treatments" :key="treat.id">{{ treat.name }}</li>
+          <li v-for="treat in card.treatments" :key="treat.id">
+            {{ treat.name }}
+          </li>
         </ul>
         <div class="shipa-card_contacts">
-          <h4 v-for="contact in card.contacts" :key="contact">{{ contact }}</h4>
+          <!-- <h4 v-for="contact in card.contacts" :key="contact">{{ contact }}</h4> -->
         </div>
       </div>
     </div>
@@ -47,7 +54,18 @@ $description-color: #666;
 $info-font-size: 1rem;
 $link-color: inherit;
 $link-decoration: none;
+// =====
+.list-view-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.grid-view-none {
+  display: flex;
+  flex-direction: column;
+}
+// =====
 .shipa-card_link {
   display: block;
   text-decoration: $link-decoration;
@@ -55,7 +73,7 @@ $link-decoration: none;
 }
 
 .shipa-card {
-  display: flex;
+  // display: flex;
   background-color: $card-bg-color;
   border: 1px solid $card-border-color;
   border-radius: 10px;
@@ -88,12 +106,10 @@ $link-decoration: none;
     flex-direction: column;
     justify-content: space-between;
 
-
     &_title {
       color: $title-color;
       font-size: 1.5rem;
-      margin-bottom: 10px;    
-
+      margin-bottom: 10px;
     }
 
     &_subtitle {
@@ -130,10 +146,16 @@ $link-decoration: none;
 }
 
 @media (max-width: 768px) {
+  .shipa-card_link {
+    margin: 0;
+    padding: 0;
+  }
   .shipa-card {
     flex-direction: column;
     align-items: stretch;
     text-align: start;
+    margin: 0;
+    padding: 0;
 
     &_img {
       border-right: none;
@@ -143,10 +165,14 @@ $link-decoration: none;
     &_info {
       padding: 15px;
 
-      &_title,
-      &_subtitle,
+      &_title {
+        font-size: 18px;
+      }
+      &_subtitle {
+        font-size: 16px;
+      }
       &_description {
-        font-size: 1.2rem;
+        font-size: 14px;
       }
 
       &_treatments li,
