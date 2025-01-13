@@ -19,7 +19,7 @@ const props = defineProps({
 .image-container {
   width: 100%;
   max-width: 600px; /* Базовый размер для десктопа */
-  height: 500px;
+  height: 400px;
   overflow: hidden;
   display: flex;
   justify-content: center;
