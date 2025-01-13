@@ -27,7 +27,6 @@ const props = defineProps({
   margin: 30px;
   color: #fff;
   max-width: 1300px;
-  width: 100%;
 }
 .procedures_ul {
     display: flex;
@@ -35,6 +34,7 @@ const props = defineProps({
     flex-direction: column;
     height: 300px;
     margin-bottom: 15px;
+    width: 100%;
 
     &_title {
         color: #ddac58;

@@ -4,7 +4,7 @@ import ShipaMainCardList from "./ShipaMainCardList/ShipaMainCardList.vue";
 </script>
 
 <template>
-  <div>
+  <div >
     <ShipaMainHeader />
     <ShipaMainCardList />
   </div>

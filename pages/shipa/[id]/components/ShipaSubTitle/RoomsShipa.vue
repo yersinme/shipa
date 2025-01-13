@@ -87,6 +87,7 @@ ul {
   align-items: start;
   gap: 15px;
   margin: 30px;
+  padding-top: 30px;
   max-width: 1300px;
   width: 100%;
 }
@@ -94,6 +95,7 @@ ul {
 .room-card {
   background-color: #1f1d2b;
   color: #fff;
+
 }
 
 .card_text {

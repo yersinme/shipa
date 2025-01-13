@@ -17,7 +17,7 @@ import MainShipaSearch from "../components/MainShipaSearch/MainShipaSearch.vue";
   left: 0;
   width: 100%;
   min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* Затемненный фон */
+  background-color:grey; /* Затемненный фон */
   display: flex;
   justify-content: center;
   align-items: flex-start; /* Выравнивание контента от верхней части */
