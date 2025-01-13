@@ -89,11 +89,15 @@ const sendImgData = (data) => {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+   object-fit: cover; /* изображение полностью покрывает карточку */
+    height: 100%; /* изображение занимает всю высоту карточки */
+    width: 100%; /* изображение занимает всю ширину карточки */
 }
 
 .mx-auto {
   background-color: #252836;
 }
+
 
 /* Адаптация для планшетов */
 @media (max-width: 1024px) {
@@ -101,8 +105,32 @@ const sendImgData = (data) => {
 }
 
 /* Адаптация для мобильных устройств */
+/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
-
+  .slider-container {
+    overflow-x: auto;
   }
+
+  .image-card {
+    height: 100px; /* уменьшенная высота */
+    width: 60px; /* уменьшенная ширина */
+    margin: 2px; /* минимальный отступ */
+  }
+
+  .slider-img {
+    object-fit: cover; /* изображение полностью покрывает карточку */
+    height: 100%; /* изображение занимает всю высоту карточки */
+    width: 100%; /* изображение занимает всю ширину карточки */
+  }
+
+  .v-slide-group {
+    gap: 4px; /* минимальное расстояние между карточками */
+  }
+
+  /* Скрытие стрелок */
+  .v-slide-group__prev, .v-slide-group__next {
+    display: none;
+  }
+}
 
 </style>
