@@ -13,7 +13,7 @@ import IndexUnderHeadSub from "./components/ShipaSubTitle/IndexShipaSub.vue";
 
 <style scoped>
 .shipa-container {
-    width: 100%;
+  width: 100%;
   max-width: 1300px;
   margin: 0 auto;
   /* background-color: #252836; */

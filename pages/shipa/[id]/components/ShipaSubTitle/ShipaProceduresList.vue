@@ -26,6 +26,8 @@ const props = defineProps({
 .procedures {
   margin: 30px;
   color: #fff;
+  max-width: 1300px;
+  width: 100%;
 }
 .procedures_ul {
     display: flex;

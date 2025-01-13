@@ -16,7 +16,8 @@ import Sidebar from "./ShipaSideBar.vue"
 
 .shipa-data_container {
   display: flex;
-
+  justify-content: space-between;
+  max-width: 1300px;
   width: 100%;
   /* flex-wrap: wrap; */
   /* max-width: 1300px; */

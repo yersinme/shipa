@@ -47,6 +47,7 @@ onMounted(async () => {
   gap: 15px;
   transition: transform 0.2s;
   color: #fff;
+  /* max-width: 1300px; */
   width: 100%;
 }
 
@@ -56,4 +57,12 @@ onMounted(async () => {
 .subtitle_title {
   color: #ddac58;
 }
+
+@media (max-width: 768px) {
+  .under-title {
+     margin: 0;
+  }
+}
+
+
 </style>

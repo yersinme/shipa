@@ -35,5 +35,9 @@ const props = defineProps({
   object-fit: cover;
 }
 
-
+@media (max-width: 768px) {
+.imgData {
+  margin: 30px;
+}
+}
 </style>

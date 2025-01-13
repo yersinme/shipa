@@ -68,6 +68,7 @@ onMounted(async () => {
 @media (max-width: 768px) {
  .sidebar {
   width: 100%;
+  margin: 0;
  }
  .sidebar_title {
   font-size: 28px;
