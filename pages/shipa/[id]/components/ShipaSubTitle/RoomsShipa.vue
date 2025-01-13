@@ -46,7 +46,7 @@ const toggleCard = (id: number) => {
 
       <v-card-actions>
         <v-btn color="orange-lighten-2" @click="toggleCard(item.id)">
-          Explore
+          Больше
         </v-btn>
 
         <v-spacer></v-spacer>
