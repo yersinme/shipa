@@ -1,4 +1,4 @@
-<script setup lang="ts">
+  <script setup lang="ts">
 import { styleState } from "../composables/index";
 import ShipaMainCard from "./components/ShipaMainCard.vue";
 import { ref, onMounted } from "vue";

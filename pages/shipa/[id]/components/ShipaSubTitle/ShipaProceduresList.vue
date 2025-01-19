@@ -11,12 +11,13 @@ const props = defineProps({
 <template>
   <div class="procedures">
     <div v-for="subtitle in subtitles" :key="subtitle.id" class="procedures-container">
-      <div v-for="item in subtitle.procedures" :key="item.id" class="procedures_ul">
-        <h2 class="procedures_ul_title">{{ item.name }}</h2>
+      <div v-for="item in subtitle.procedures" :key="item.id" >
+        
+        <h2 class="procedures_ul_title">{{ item.name }}</h2><div class="procedures_ul">
         <ul v-for="descrip in item.description" :key="descrip.id" >
           <li>{{ descrip }}</li>
         </ul>
-      </div>
+      </div></div>
     </div>
   </div>
 
@@ -24,7 +25,7 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .procedures {
-  margin: 30px;
+  margin-top: 30px;
   color: #fff;
   max-width: 1300px;
 }

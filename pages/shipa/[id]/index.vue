@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import IndexShipaHeader from "./components/ShipaHaeder/IndexShipaHeader.vue";
 import IndexUnderHeadSub from "./components/ShipaSubTitle/IndexShipaSub.vue";
+import ShipaFooter from "./components/ShipaFooter/ShipaFooter.vue"
 </script>
 
 
@@ -8,6 +9,7 @@ import IndexUnderHeadSub from "./components/ShipaSubTitle/IndexShipaSub.vue";
   <div class="shipa-container">
     <IndexShipaHeader />
     <IndexUnderHeadSub />
+    <ShipaFooter />
   </div>
 </template>
 

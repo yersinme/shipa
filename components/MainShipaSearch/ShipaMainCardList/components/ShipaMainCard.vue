@@ -166,13 +166,13 @@ $link-decoration: none;
       padding: 15px;
 
       &_title {
-        font-size: 18px;
-      }
-      &_subtitle {
         font-size: 16px;
       }
-      &_description {
+      &_subtitle {
         font-size: 14px;
+      }
+      &_description {
+        font-size: 12px;
       }
 
       &_treatments li,
