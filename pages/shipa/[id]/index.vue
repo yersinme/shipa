@@ -19,5 +19,6 @@ import ShipaFooter from "./components/ShipaFooter/ShipaFooter.vue"
   max-width: 1300px;
   margin: 0 auto;
   /* background-color: #252836; */
+  padding-bottom: 30px;
 }
 </style>
