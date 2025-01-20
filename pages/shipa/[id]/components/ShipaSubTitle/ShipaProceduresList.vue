@@ -36,13 +36,18 @@ const props = defineProps({
     height: 300px;
     margin-bottom: 15px;
     width: 100%;
+  list-style-type: disc;
+  padding-left: 25px;
 
     &_title {
         color: #ddac58;
         margin-bottom: 15px;
+        padding-left: 15px;
     }
 }
 
+li {
+}
 @media (max-width: 768px) {
   .procedures_ul {
     height: 100%;
