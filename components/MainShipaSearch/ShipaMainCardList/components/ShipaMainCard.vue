@@ -28,9 +28,9 @@ const props = defineProps({
         <img :src="card.defaultImage" alt="Image of {{ card.title }}" />
       </div>
       <div class="shipa-card_info">
-        <h2 class="shipa-card_title">{{ card.title }}</h2>
-        <h3 class="shipa-card_subtitle">{{ card.subtitle }}</h3>
-        <ul class="shipa-card_treatments">
+        <p class="shipa-card_info_title">{{ card.title }}</p>
+        <p class="shipa-card_info_subtitle">{{ card.subtitle }}</p>
+        <ul class="shipa-card_info_treatments">
           <li v-for="treat in card.treatments" :key="treat.id">
             {{ treat.name }}
           </li>
@@ -51,7 +51,7 @@ $card-padding: 20px;
 $title-color: #000;
 $subtitle-color: #555;
 $description-color: #666;
-$info-font-size: 1rem;
+$info-font-size: 12px;
 $link-color: inherit;
 $link-decoration: none;
 // =====
@@ -108,13 +108,14 @@ $link-decoration: none;
 
     &_title {
       color: $title-color;
-      font-size: 1.5rem;
+      font-size: 28px;
       margin-bottom: 10px;
+      color: rgba(192, 164, 5, 0.534);
     }
 
     &_subtitle {
       color: $subtitle-color;
-      font-size: 1.2rem;
+      font-size: 18px;
       margin-bottom: 10px;
     }
 
@@ -166,7 +167,7 @@ $link-decoration: none;
       padding: 15px;
 
       &_title {
-        font-size: 16px;
+        font-size: 20px;
       }
       &_subtitle {
         font-size: 14px;

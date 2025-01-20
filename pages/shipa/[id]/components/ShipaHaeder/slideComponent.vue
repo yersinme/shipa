@@ -42,8 +42,9 @@ const sendImgData = (data) => {
       <SlideMainIMG :imgData="imgData" />
     </div>
     <div v-if="product && product.sliderImages" class="slider-container">
-      <v-sheet class="mx-auto" elevation="50" max-width="750" width="100%">
+      <v-sheet class="mx-auto" elevation="50" max-width="1050" >
         <v-slide-group v-model="model" class="pa-4" center-active show-arrows>
+          
           <v-slide-group-item
             v-for="(img, i) in product.sliderImages"
             :key="i"
@@ -72,6 +73,7 @@ const sendImgData = (data) => {
 </template>
 
 <style scoped lang="scss">
+/* Стили для всего компонента */
 .product-container {
   display: flex;
   align-items: center;
@@ -79,7 +81,6 @@ const sendImgData = (data) => {
   width: 100%;
   max-width: 800px;
 }
-
 
 .slider-container {
   width: 100%;
@@ -89,47 +90,53 @@ const sendImgData = (data) => {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-   object-fit: cover; /* изображение полностью покрывает карточку */
-    height: 100%; /* изображение занимает всю высоту карточки */
-    width: 100%; /* изображение занимает всю ширину карточки */
+  object-fit: cover; /* изображение полностью покрывает карточку */
+  height: 100%; /* изображение занимает всю высоту карточки */
+  width: 100%; /* изображение занимает всю ширину карточки */
 }
 
 .mx-auto {
   background-color: #252836;
 }
 
-
 /* Адаптация для планшетов */
 @media (max-width: 1024px) {
-
+  .image-card {
+    height: 120px;
+    width: 90px;
+  }
 }
 
-/* Адаптация для мобильных устройств */
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
   .slider-container {
     overflow-x: auto;
+    margin-left: -100px;    width: 200%;
+
   }
 
+
+
   .image-card {
-    height: 100px; /* уменьшенная высота */
-    width: 60px; /* уменьшенная ширина */
-    margin: 2px; /* минимальный отступ */
+    height: 90px; /* уменьшенная высота */
+    width: 70px; /* увеличенная ширина для удобства просмотра */
+    margin: 4px; /* минимальный отступ */
   }
 
   .slider-img {
-    object-fit: cover; /* изображение полностью покрывает карточку */
-    height: 100%; /* изображение занимает всю высоту карточки */
-    width: 100%; /* изображение занимает всю ширину карточки */
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
   }
 
   .v-slide-group {
-    gap: 4px; /* минимальное расстояние между карточками */
+    gap: 6px; /* минимальное расстояние между карточками */
   }
 
   /* Скрытие стрелок */
-  .v-slide-group__prev, .v-slide-group__next {
-    display: none;
+  .v-slide-group__prev,
+  .v-slide-group__next {
+    display: none !important;
   }
 }
 
