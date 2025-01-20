@@ -41,7 +41,8 @@ const props = defineProps({
         <div class="shipa-card_contacts">
           <!-- <h4 v-for="contact in card.contacts" :key="contact">{{ contact }}</h4> -->
         </div>
-      <button class="card_text-btn" @click="s">Забронировать</button></div>           
+        <a :href="card.whatsappLink" target="_blank" class="card_text-btn">Забронировать</a>
+      </div>
     </div>
   </NuxtLink>
 </template>
@@ -100,6 +101,7 @@ $link-decoration: none;
     color: #fff;
     border-radius: 5px;
     margin-top: 15px;
+    text-align: center;
   }
 
   &_img {

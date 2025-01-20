@@ -59,7 +59,7 @@ const sendImgData = (data) => {
             >
               <img
                 :src="img"
-                alt="Image"
+                alt="wait"
                 class="slider-img"
                 @click="sendImgData(img)"
               />
@@ -68,7 +68,7 @@ const sendImgData = (data) => {
         </v-slide-group>
       </v-sheet>
     </div>
-    <div v-else>Loading...</div>
+    <!-- <div v-else>Loading...</div> -->
   </div>
 </template>
 
