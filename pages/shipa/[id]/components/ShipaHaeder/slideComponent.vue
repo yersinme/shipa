@@ -110,34 +110,30 @@ const sendImgData = (data) => {
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
   .slider-container {
-    overflow-x: auto;
-    margin-left: -100px;    width: 200%;
-
-  }
-
-
-
-  .image-card {
-    height: 90px; /* уменьшенная высота */
-    width: 70px; /* увеличенная ширина для удобства просмотра */
-    margin: 4px; /* минимальный отступ */
-  }
-
-  .slider-img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
+    display: flex; /* Используем flexbox для размещения карточек */
+    overflow: hidden; /* Прячем всё, что выходит за границы */
+    width: 100%; /* Контейнер занимает всю ширину экрана */
+    position: relative; /* Для управления положением вложенных элементов */
   }
 
   .v-slide-group {
-    gap: 6px; /* минимальное расстояние между карточками */
+    display: flex; /* Горизонтальное размещение карточек */
+    gap: 2px; /* Расстояние между карточками */
+    width: 50%; /* Слайдер адаптируется к ширине экрана */
+    transition: transform 0.3s ease; /* Добавляем плавность анимации */
+    margin-left: -70px;
   }
 
-  /* Скрытие стрелок */
-  .v-slide-group__prev,
-  .v-slide-group__next {
-    display: none !important;
+  .image-card {
+    flex: 0 0 auto; /* Фиксируем размер карточек */
+    width: 25%; /* Карточка занимает 25% ширины экрана */
+    max-width: 150px; /* Ограничиваем максимальную ширину */
+    height: auto; /* Автоматическая высота */
+    margin: 0; /* Убираем отступы вокруг карточек */
   }
+
+
+
 }
 
 </style>
