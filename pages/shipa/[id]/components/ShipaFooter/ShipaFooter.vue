@@ -17,6 +17,7 @@
     color: #fff;
     font-size: 26px;
     font-weight: 400;
+    margin-bottom: 30px;
   }
   
   .footer_title {

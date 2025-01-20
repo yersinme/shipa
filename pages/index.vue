@@ -21,7 +21,7 @@ import MainShipaSearch from "../components/MainShipaSearch/MainShipaSearch.vue";
   display: flex;
   justify-content: center;
   align-items: flex-start; /* Выравнивание контента от верхней части */
-  padding-top: 50px; /* Отступ сверху */
+  padding-top: 20px; /* Отступ сверху */
   z-index: 1000;
 }
 
