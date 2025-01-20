@@ -38,6 +38,7 @@ onMounted(async () => {
 .sidebar {
   background-color: #1f1d2b;
   padding: 30px;
+  /* padding-bottom: 5px; */
   width: 100%;
   border-radius: 10px;
   margin: 30px;

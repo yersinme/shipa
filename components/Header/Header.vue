@@ -22,7 +22,7 @@ box-shadow:  0 4px 6px rgba(0, 0, 0, 0.1);;
 @media (max-width: 768px) {
   .header {
     padding: 15px;
-    font-size: 18px;
+    font-size: 24px;
   }
   }
 </style>

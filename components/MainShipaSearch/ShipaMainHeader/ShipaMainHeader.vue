@@ -8,7 +8,7 @@ const HeaderTogglestyleState = TogglestyleState
 
 <template>
   <div class="shipa-main_header">
-    <div class="shipa-main_header_title"></div>
+    <div class="shipa-main_header_title">Все санатории</div>
     <div class="shipa-main_header_style_btns">
       <button @click="HeaderTogglestyleState" v-if="HeaderStyleState">
         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
@@ -31,7 +31,7 @@ $text-color: #333;
 $svg-color: #5f6368;
 $header-padding: 20px;
 $header-font-family: 'Arial', sans-serif;
-$header-title-font-size-desktop: 2rem;
+$header-title-font-size-desktop: 28px;
 $header-title-font-size-mobile: 1.5rem;
 
 .shipa-main_header {
@@ -43,7 +43,7 @@ $header-title-font-size-mobile: 1.5rem;
   color: $text-color;
   font-family: $header-font-family;
 
-  &__title {
+  &_title {
     font-size: $header-title-font-size-desktop;
     font-weight: bold;
   }

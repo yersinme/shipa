@@ -23,7 +23,10 @@ const props = defineProps({
     :key="card.id"
     @click="toShipaPage(card.id)"
   >
-    <div class="shipa-card"  :class="styleState ? 'list-view-flex' : 'grid-view-none'">
+    <div
+      class="shipa-card"
+      :class="styleState ? 'list-view-flex' : 'grid-view-none'"
+    >
       <div class="shipa-card_img">
         <img :src="card.defaultImage" alt="Image of {{ card.title }}" />
       </div>
@@ -38,7 +41,7 @@ const props = defineProps({
         <div class="shipa-card_contacts">
           <!-- <h4 v-for="contact in card.contacts" :key="contact">{{ contact }}</h4> -->
         </div>
-      </div>
+      <button class="card_text-btn" @click="s">Забронировать</button></div>           
     </div>
   </NuxtLink>
 </template>
@@ -84,18 +87,32 @@ $link-decoration: none;
   margin: 20px;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.02);
   }
 
+  .card_text-btn {
+    width: 100%;
+    background-color: green;
+    padding: 15px;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+
   &_img {
     flex: 1;
     img {
-      width: 100%;
-      height: auto;
+      // width: 100%;
+      // height: auto;
+      // object-fit: cover;
+      // border-right: 1px solid $card-border-color;
+      width: 300px;
+      height: 200px;
       object-fit: cover;
-      border-right: 1px solid $card-border-color;
+      border-radius: 5px;
     }
   }
 
