@@ -35,8 +35,8 @@ import Social from "./components/ShipaHaeder/Shipasocial.vue"
 
 @media (max-width: 768px) {
   .social {
-    right: 10px; /* Уменьшенный отступ для мобильных устройств */
-    bottom: 10px;
+    right: 20px; /* Уменьшенный отступ для мобильных устройств */
+    bottom: 30px;
   }
 }
 </style>
