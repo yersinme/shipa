@@ -7,7 +7,6 @@ import { ref, computed, onMounted } from "vue";
 const route = useRoute();
 const products = ref([]);
 const imgData = ref();
-const model = ref();
 
 onMounted(async () => {
   try {
@@ -15,12 +14,13 @@ onMounted(async () => {
       "https://4c5b5b24cc48bd57.mokky.dev/saryagashshipa"
     );
     products.value = data;
-    // Установим изображение по умолчанию как первое в массиве sliderImages
-    if (
-      products.value.length > 0 &&
-      products.value[0].sliderImages.length > 0
-    ) {
-      imgData.value = products.value[0].sliderImages[0];
+
+    // Если в маршруте указан ID санатория, выбираем его первое изображение
+    const currentProduct = products.value.find(
+      (p) => p.id == route.params.id
+    );
+    if (currentProduct?.sliderImages?.length > 0) {
+      imgData.value = currentProduct.sliderImages[0];
     }
   } catch (err) {
     console.log(err);
@@ -39,12 +39,12 @@ const sendImgData = (data) => {
 <template>
   <div class="product-container">
     <div class="main-image-container">
+      <!-- Отображение главного изображения для текущего санатория -->
       <SlideMainIMG :imgData="imgData" />
     </div>
     <div v-if="product && product.sliderImages" class="slider-container">
-      <v-sheet class="mx-auto" elevation="50" max-width="1050" >
+      <v-sheet class="mx-auto" elevation="50" max-width="1050">
         <v-slide-group v-model="model" class="pa-4" center-active show-arrows>
-          
           <v-slide-group-item
             v-for="(img, i) in product.sliderImages"
             :key="i"
@@ -68,7 +68,6 @@ const sendImgData = (data) => {
         </v-slide-group>
       </v-sheet>
     </div>
-    <!-- <div v-else>Loading...</div> -->
   </div>
 </template>
 

@@ -13,3 +13,4 @@ import ShipaMainCardList from "./ShipaMainCardList/ShipaMainCardList.vue";
 <style scoped>
 
 </style>
+

@@ -29,7 +29,7 @@ onMounted(async () => {
     <h2 class="sidebar_subtitle">{{ title.subtitle }}</h2>
     <p class="subtitle_description">{{ title.description }}</p>
 
-    <Socials />
+    <!-- <Socials /> -->
   </div>
   <div v-else>err</div>
 </template>
