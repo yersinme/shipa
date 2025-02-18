@@ -21,7 +21,7 @@ import MainShipaSearch from "../components/MainShipaSearch/MainShipaSearch.vue";
   display: flex;
   justify-content: center;
   align-items: flex-start; /* Выравнивание контента от верхней части */
-  padding-top: 20px; /* Отступ сверху */
+  padding-top: 100px; /* Отступ сверху */
   z-index: 1000;
 }
 
@@ -35,5 +35,11 @@ import MainShipaSearch from "../components/MainShipaSearch/MainShipaSearch.vue";
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
   overflow-y: auto; /* Включаем вертикальный скроллинг */
   min-height: 50vh; /* Минимальная высота окна, 50% от высоты экрана */
+}
+
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding-top:80px;
+  }
 }
 </style>

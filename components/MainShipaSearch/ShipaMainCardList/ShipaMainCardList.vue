@@ -27,7 +27,7 @@ watch(searchVal, fetchData);
 </script>
 
 <template>
-  <div>
+  <div class="main">
     <div class="group">
       <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
         <g>
@@ -60,6 +60,7 @@ watch(searchVal, fetchData);
 </template>
 
 <style scoped lang="scss">
+
 .shipa-main_cards_list {
   display: flex;
   flex-direction: column;
