@@ -68,7 +68,7 @@ const toggleCard = (id: number) => {
           <v-card-text class="card_text">
             <div class="card_text-container">
               {{ item.characteristics }}
-              <a href="https://wa.me/87023954343" target="_blank" class="card_text-btn">Забронировать</a>
+              <a href="https://wa.me/77023954343" target="_blank" class="card_text-btn">Забронировать</a>
             </div>
           </v-card-text>
         </div>
