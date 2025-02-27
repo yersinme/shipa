@@ -1,7 +1,12 @@
 <template>
   <div class="footer_main">
-    <a href="tel:87023954343" class="phone-link">87023954343</a> <br>
-    <a href="tel:87053954343" class="phone-link">87053954343</a>
+    <a href="tel:87023954343" class="phone-link">
+      <Icon name="uil:phone" class="text-blue-500 "  size="26" /> 87023954343</a
+    >
+    <br />
+    <a href="tel:87053954343" class="phone-link"
+      ><Icon name="uil:phone" class="text-blue-500 "  size="26" /> 87053954343</a
+    >
     <div class="footer_title">Для получения дополнительной информации</div>
   </div>
 </template>

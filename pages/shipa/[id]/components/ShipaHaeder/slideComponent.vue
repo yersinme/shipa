@@ -7,6 +7,7 @@ import { ref, computed, onMounted } from "vue";
 const route = useRoute();
 const products = ref([]);
 const imgData = ref();
+const model = ref(0); // Управление текущим элементом в v-slide-group
 
 onMounted(async () => {
   try {
@@ -34,6 +35,19 @@ const product = computed(() => {
 const sendImgData = (data) => {
   imgData.value = data;
 };
+
+// Программное центрирование карточки
+const scrollToImage = (index) => {
+  const slider = document.querySelector('.v-slide-group');
+  const targetCard = slider.querySelectorAll('.image-card')[index];
+  if (targetCard) {
+    targetCard.scrollIntoView({
+      behavior: 'smooth', 
+      block: 'nearest', // Отключает вертикальный скроллинг
+      inline: 'center', // Центрирует элемент по горизонтали
+    });
+  }
+};
 </script>
 
 <template>
@@ -55,13 +69,12 @@ const sendImgData = (data) => {
               class="ma-4 image-card"
               height="150"
               width="130"
-              @click="toggle"
+              @click="() => { toggle(); sendImgData(img); scrollToImage(i); }"
             >
               <img
                 :src="img"
                 alt="wait"
                 class="slider-img"
-                @click="sendImgData(img)"
               />
             </v-card>
           </v-slide-group-item>
@@ -130,9 +143,5 @@ const sendImgData = (data) => {
     height: auto; /* Автоматическая высота */
     margin: 0; /* Убираем отступы вокруг карточек */
   }
-
-
-
 }
-
 </style>
