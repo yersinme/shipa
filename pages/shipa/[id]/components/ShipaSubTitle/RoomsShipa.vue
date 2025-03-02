@@ -39,8 +39,15 @@ const toggleCard = (id: number) => {
 
       <v-card-subtitle>
         <ul>
-          <li>1 человек: {{ item.pricePerPerson }}тг</li>
-          <li>2 персоны: {{ item.priceForTwo }}тг</li>
+          <div>
+  <li v-if="item.pricePerPerson">1 человек: {{ item.pricePerPerson }}тг</li>
+  <li v-else></li>
+
+  <li v-if="item.priceForTwo">2 персоны: {{ item.priceForTwo }}тг</li>
+  <li v-else></li>
+</div>
+
+
         </ul>
       </v-card-subtitle>
 
